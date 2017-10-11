@@ -15,7 +15,7 @@ router.post('/login', function(req, res) {
     if (data) {
       res.json({ status: '1', msg: '登录成功' })
     } else {
-      res.json({ status: '0', errorMsg: '请输入正确的账号密码！' })
+      res.status(500).json({ status: '0', errorMsg: '请输入正确的账号密码！' })
     }
   })
 })
